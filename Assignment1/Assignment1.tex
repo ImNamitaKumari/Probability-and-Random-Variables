@@ -4,7 +4,6 @@
 \usepackage{gensymb}
 %\doublespacing
 \singlespacing
-
 %\usepackage{graphicx}
 %\usepackage{amssymb}
 %\usepackage{relsize}
@@ -19,6 +18,7 @@
 %\usepackage{iithtlc}
 \usepackage{mathrsfs}
 \usepackage{txfonts}
+\usepackage{tabularx}
 \usepackage{stfloats}
 \usepackage{bm}
 \usepackage{cite}
@@ -186,7 +186,20 @@ https://github.com/ImNamitaKumari/Probability-and-Random-Variables/blob/main/Ass
 as it fails. Find the probability that in the
 next six trials, there will be at least 4 successes.
 \section{solution}
-Let X be the random variable denoting the number of successes in $n$ trials. X follows a Binomial Distribution. Let $p$ be the probability of success in each trial. Then, $(1-p)$ is the probability of failure in each trial.
+\begin{center}
+
+\begin{tabular}{|p{0.08\textwidth}|p{0.37\textwidth}|}
+\hline
+ \textbf{Variable} & \textbf{Description}\\
+ \hline
+ $n$ & number of trials\\
+ \hline
+ X & random variable denoting the number of successes in $n$ trials\\
+ \hline
+ $p$ & probability of success in each trial\\
+ \hline
+\end{tabular}
+\end{center}
 \bigbreak
 As per question,
 \begin{align}
@@ -199,14 +212,15 @@ For a binomial distribution,
 \end{align}
 For the given question,
 \begin{center}
-\begin{tabular}{ |c|c|c| } 
+\begin{tabular}{|c|c|c|}
+\hline
+ \textbf{Variable} & $n$ & $p$\\
  \hline
- Variable & $n$ & $p$\\
- \hline
- Value & 6 & 2/3\\
+ \textbf{Value} & 6 & 2/3\\
  \hline
 \end{tabular}
 \end{center}
+From \eqref{eq:2.0.3} we have,
 \begin{align}
 \pr{X\geq4}&=\sum_{i=4}^{6}[\comb{6}{i} p^i\brak{1-p}^{6-i}]
 \label{eq: 2.0.4}\\
