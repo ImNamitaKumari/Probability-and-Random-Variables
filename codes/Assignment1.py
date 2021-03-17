@@ -28,13 +28,3 @@ for i in range(4,7):
 
 #Theory vs simulation
 print(err_n_2,prob2)
-
-
-
-
-
-
-
-
-
-#calculating sum of probabilities
