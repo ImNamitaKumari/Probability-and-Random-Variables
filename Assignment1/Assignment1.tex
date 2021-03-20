@@ -2,6 +2,7 @@
 %
 \usepackage{setspace}
 \usepackage{gensymb}
+\usepackage{caption}
 %\doublespacing
 \singlespacing
 %\usepackage{graphicx}
@@ -18,14 +19,12 @@
 %\usepackage{iithtlc}
 \usepackage{mathrsfs}
 \usepackage{txfonts}
-\usepackage{tabularx}
 \usepackage{stfloats}
 \usepackage{bm}
 \usepackage{cite}
 \usepackage{cases}
 \usepackage{subfig}
 \usepackage{xtab}
-\usepackage{longtable}
 \usepackage{multirow}
 %\usepackage{algorithm}
 %\usepackage{algpseudocode}
@@ -124,12 +123,9 @@ columns=fullflexible
 \theoremstyle{remark}
 \newtheorem{rem}{Remark}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
-\providecommand{\abs}[1]{\left\vert#1\right\vert}
 \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
-\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
 %\providecommand{\norm}[1]{\lVert#1\rVert}
 \providecommand{\mtx}[1]{\mathbf{#1}}
-\providecommand{\mean}[1]{E\left[ #1 \right]}
 \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
 %\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
 \providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
@@ -185,9 +181,9 @@ https://github.com/ImNamitaKumari/Probability-and-Random-Variables/blob/main/Ass
 as it fails. Find the probability that in the
 next six trials, there will be at least 4 successes.
 \section{solution}
-\begin{center}
-
-\begin{tabular}{|p{0.08\textwidth}|p{0.37\textwidth}|}
+\begin{table}[h]
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{|p|p|}
 \hline
  \textbf{Variable} & \textbf{Description}\\
  \hline
@@ -198,7 +194,11 @@ next six trials, there will be at least 4 successes.
  $p$ & probability of success in each trial\\
  \hline
 \end{tabular}
-\end{center}
+}
+\caption{Description of variables}
+\label{Tab 0}
+\end{table}
+
 \bigbreak
 As per question,
 \begin{align}
@@ -207,9 +207,10 @@ As per question,
     \end{align}
 For a binomial distribution,
 \begin {align}
-\pr{X=k}= \comb{n}{k} p^k \brak{1-p}^{n-k}\label{eq:2.0.3}
-\end{align}
+    \pr{X=k}= \comb{n}{k} p^k \brak{1-p}^{n-k}\label{eq:2.0.3}
+    \end{align}
 For the given question,
+\begin{table}[h]
 \begin{center}
 \begin{tabular}{|c|c|c|}
 \hline
@@ -218,7 +219,10 @@ For the given question,
  \textbf{Value} & 6 & 2/3\\
  \hline
 \end{tabular}
+\caption{Value of variables}
+\label{Tab 1}
 \end{center}
+\end{table}
 From \eqref{eq:2.0.3} we have,
 \begin{align}
 \pr{X\geq4}&=\sum_{i=4}^{6}\comb{6}{i} p^i\brak{1-p}^{6-i}
