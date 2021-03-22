@@ -182,7 +182,9 @@ as it fails. Find the probability that in the
 next six trials, there will be at least 4 successes.
 \section{solution}
 \begin{table}[h]
-\begin{tabular}{|p{0.08\textwidth}|p{0.37\textwidth}|}
+\centering
+\resizebox{.5\textwidth}{!}{
+\begin{tabular}{|p{1.4cm}|p{6cm}|}
 \hline
  \textbf{Variable} & \textbf{Description}\\
  \hline
@@ -193,6 +195,7 @@ next six trials, there will be at least 4 successes.
  $p$ & probability of success in each trial\\
  \hline
 \end{tabular}
+}
 \caption{Description of variables}
 \label{Tab 0}
 \end{table}
@@ -208,8 +211,8 @@ For a binomial distribution,
     \pr{X=k}= \comb{n}{k} p^k \brak{1-p}^{n-k}\label{eq:2.0.3}
     \end{align}
 For the given question,
-\begin{table}[h]
-\begin{center}
+\begin{table}[htb!]
+\centering
 \begin{tabular}{|c|c|c|}
 \hline
  \textbf{Variable} & $n$ & $p$\\
@@ -219,8 +222,8 @@ For the given question,
 \end{tabular}
 \caption{Value of variables}
 \label{Tab 1}
-\end{center}
 \end{table}
+\newline
 From \eqref{eq:2.0.3} we have,
 \begin{align}
 \pr{X\geq4}&=\sum_{i=4}^{6}\comb{6}{i} p^i\brak{1-p}^{6-i}
