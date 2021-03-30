@@ -20,6 +20,7 @@
 \usepackage{mathrsfs}
 \usepackage{txfonts}
 \usepackage{stfloats}
+\usepackage{float}
 \usepackage{bm}
 \usepackage{cite}
 \usepackage{cases}
@@ -196,13 +197,23 @@ $X$ & \pr{X} & $Y$ & \pr{Y}\\
 \caption{Random Variables and their probabilities}
 \label{tab1}
 \end{table}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.8]{assgn3-venn.png}
+    \caption{Venn diagram}
+    \label{fig:my_label}
+\end{figure}
+As evident from the venn diagram,
+\begin{align}
+ \pr{\{X=1\}\{Y=1\}}=P(AB)=\frac{1}{2}   
+\end{align}
 \begin{multline}
 P(A|B)=\pr{X=1|Y=1}=\frac{\pr{\{X=1\}\{Y=1\}}}{\pr{Y=1}}\\
-=\dfrac{1\times\frac{1}{2}}{\frac{1}{2}}=1\\
+=\dfrac{\frac{1}{2}}{\frac{1}{2}}=1\\
 \end{multline}
 \begin{multline}
 P(B|A)=\pr{Y=1|X=1}=\frac{\pr{\{Y=1\}\{X=1\}}}{\pr{X=1}}\\
-=\dfrac{\frac{1}{2}\times 1}{1}=\frac{1}{2}
+=\dfrac{\frac{1}{2}}{1}=\frac{1}{2}
 \end{multline}
-As evident from question too, A and B are independent events. So, $P(A|B)=P(A)$ and $P(B|A)=P(B)$.
+Hence the correct answer is option 4).
 \end{document}
