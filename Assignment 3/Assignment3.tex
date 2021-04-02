@@ -182,38 +182,18 @@ Let P(E) denote the probability of the event E. Given P(A)=1, P(B)=$\frac{1}{2}$
 \end{enumerate}
 }
 \section{Solution}
-Let X$\in$\{0,1\} be the random variable denoting the non-occurrence or occurrence of event A and Y$\in$\{0,1\} be the random variable denoting the non-occurrence or occurrence of event B.
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-$X$ & \pr{X} & $Y$ & \pr{Y}\\
-\hline
-0 & 0 & 0 & $\frac{1}{2}$\\
-\hline
-1 & 1 & 1 & $\frac{1}{2}$\\
-\hline
-\end{tabular}
-\caption{Random Variables and their probabilities}
-\label{tab1}
-\end{table}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.8]{assgn3-venn.png}
-    \caption{Venn diagram}
-    \label{fig:my_label}
-\end{figure}
-As evident from the venn diagram,
+Applying Boolean Logic,
 \begin{align}
- \pr{\{X=1\}\{Y=1\}}=P(AB)=\frac{1}{2}   
+P(A)=1
+    \implies A=1\label{eq1}\\
+     P(A|B)=\frac{P(AB)}{P(B)}
+     \end{align}
+     Using \eqref{eq1},
+     \begin{align}
+     P(A|B)&=\frac{P(1\times B)}{P(B)}\\
+    &=\frac{P(B)}{P(B)}=1\\
+    P(B|A)&=\frac{P(AB)}{P(A)}\\
+    &=\frac{P(B)}{P(A)}=\dfrac{\frac{1}{2}}{1}=\frac{1}{2}
 \end{align}
-\begin{multline}
-P(A|B)=\pr{X=1|Y=1}=\frac{\pr{\{X=1\}\{Y=1\}}}{\pr{Y=1}}\\
-=\dfrac{\frac{1}{2}}{\frac{1}{2}}=1\\
-\end{multline}
-\begin{multline}
-P(B|A)=\pr{Y=1|X=1}=\frac{\pr{\{Y=1\}\{X=1\}}}{\pr{X=1}}\\
-=\dfrac{\frac{1}{2}}{1}=\frac{1}{2}
-\end{multline}
 Hence the correct answer is option 4).
 \end{document}
