@@ -180,16 +180,30 @@ Suppose $X_1, X_2,$ ... are independent random variables. Assume that $X_1,X_3,$
     \item $a_n=n(\mu_1+\mu_2)$ and $b_n=\sqrt{n}\sqrt{\frac{\sigma_1^2+\sigma_2^2}{2}}$
 \end{enumerate}
 \section{Solution}
+\begin{lemma}
+\label{3lemma}
 For X and Y being independent random variables,
 \begin{align}
     E(X+Y)=E(X)+E(Y)\label{1}\\
     Var(X+Y)=Var(X)+Var(Y)\label{3}\\
     Var(aX+b)=a^2Var(X)\label{2}
     \end{align}
+    \end{lemma}
+\begin{corollary}
+\label{eq2.0.4}
+\begin{align}
+E(S_n)=
+    \begin{cases}
+    \frac{n(\mu_1+\mu_2)}{2} & n=\mathrm{even}\\
+    \frac{n(\mu_1+\mu_2)}{2}+\frac{\mu_1-\mu_2}{2} & n=\mathrm{odd}
+    \end{cases}
+\end{align}
+\end{corollary}
+\begin{proof}
 \begin{align}
     S_n=X_1+X_2+...+X_n
 \end{align}
-Using equation \eqref{1},
+Using lemma \eqref{3lemma},
 \begin{align}
     \implies E(S_n)=E(X_1)+E(X_2)+...+E(X_n)\\
     \implies E(S_n)=
@@ -198,6 +212,7 @@ Using equation \eqref{1},
     \frac{n(\mu_1+\mu_2)}{2}+\frac{\mu_1-\mu_2}{2} & n=\mathrm{odd}
     \end{cases}
 \end{align}
+\end{proof}
 Given,
 \begin{align}
     \lim_{n \to\infty}E\brak{\frac{S_n-a_n}{b_n}}=0
@@ -212,12 +227,28 @@ For all given options,
 \end{align}
 So,
 \begin{align}
-\lim_{n \to\infty}E(S_n)-a_n=k, k\in\mathbb{R}, \mathrm{free\:of\:}n\\
+\lim_{n \to\infty}E(S_n)-a_n=k, k\in\mathbb{R}, \mathrm{free\:of\:}n
+\end{align}
+Using corollary \eqref{eq2.0.4}, 
+\begin{align}
 \implies \frac{n(\mu_1+\mu_2)}{2}-a_n=k_1\\
 \mathrm{And,\:}\frac{n(\mu_1+\mu_2)}{2}+\frac{\mu_1-\mu_2}{2}-a_n=k_2\\
-\implies a_n=\frac{n(\mu_1+\mu_2)}{2}+k_3\label{5}
+\boxed{\implies a_n=\frac{n(\mu_1+\mu_2)}{2}+k_3\label{5}}
 \end{align}
-Using equation \eqref{3}
+\begin{corollary}
+\begin{align}
+Var(S_n)=
+    \begin{cases}
+    \frac{n(\sigma_1^2+\sigma_2^2)}{2} & n=\mathrm{even}\\
+    \frac{n(\sigma_1^2+\sigma_2^2)}{2}+\frac{\sigma_1^2-\sigma_2^2}{2} & n=\mathrm{odd}
+    \end{cases}
+\end{align}
+\end{corollary}
+\begin{proof}
+\begin{align}
+S_n=X_1+X_2+...+X_n
+\end{align}
+Using lemma \eqref{3lemma}
 \begin{align}
     Var(S_n)=Var(X_1)+Var(X_2)+...+Var(X_n)\\
     \implies Var(S_n)=
@@ -226,6 +257,7 @@ Using equation \eqref{3}
     \frac{n(\sigma_1^2+\sigma_2^2)}{2}+\frac{\sigma_1^2-\sigma_2^2}{2} & n=\mathrm{odd}
     \end{cases}
 \end{align}
+\end{proof}
 Given,
 \begin{align}
     \lim_{n\to\infty}Var\brak{\frac{S_n-a_n}{b_n}}=1
@@ -234,10 +266,8 @@ From equation \eqref{2},
 \begin{align}
     \implies \lim_{n\to\infty}\frac{Var(S_n)}{b_n^2}=1\\
     \implies \frac{n(\sigma_1^2+\sigma_2^2)}{2b_n^2}=1,n=\mathrm{even}\\
-    \mathrm{And,\:}\frac{n(\sigma_1^2+\sigma_2^2)}{2b_n^2}+\frac{\sigma_1^2-\sigma_2^2}{2b_n^2}=1,n=\mathrm{odd}
-    \end{align}
-    \begin{align}
-    \implies b_n=\sqrt{n}\sqrt{\frac{\sigma_1^2+\sigma_2^2}{2}},n=\mathrm{even}\label{4}\\
+    \mathrm{And,\:}\frac{n(\sigma_1^2+\sigma_2^2)}{2b_n^2}+\frac{\sigma_1^2-\sigma_2^2}{2b_n^2}=1,n=\mathrm{odd}\\
+    \boxed{\implies b_n=\sqrt{n}\sqrt{\frac{\sigma_1^2+\sigma_2^2}{2}},n=\mathrm{even}\label{4}}\\
     \mathrm{And,\:}b_n=\sqrt{\frac{n(\sigma_1^2+\sigma_2^2)+(\sigma_1^2-\sigma_2^2)}{2}},n=\mathrm{odd}
 \end{align}
 Hence from equation \eqref{4} and \eqref{5}, the correct answer is option 1).
