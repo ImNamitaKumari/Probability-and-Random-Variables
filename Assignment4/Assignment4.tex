@@ -213,28 +213,7 @@ Using lemma \eqref{3lemma},
     \end{cases}
 \end{align}
 \end{proof}
-Given,
-\begin{align}
-    \lim_{n \to\infty}E\brak{\frac{S_n-a_n}{b_n}}=0
-\end{align}
-For all options, $a_n$ and $b_n$ are fixed numbers dependent only on $n$ and not a random variable. So, $E(a_n)=a_n$ and $E(b_n)=b_n$.
-\begin{align}
-    \implies \lim_{n \to\infty}\frac{E(S_n)-a_n}{b_n}=0\\
-\end{align}
-For all given options, 
-\begin{align}
-\lim_{n \to\infty}b_n=\infty 
-\end{align}
-So,
-\begin{align}
-\lim_{n \to\infty}E(S_n)-a_n=k, k\in\mathbb{R}, \mathrm{free\:of\:}n
-\end{align}
-Using corollary \eqref{eq2.0.4}, 
-\begin{align}
-\implies \frac{n(\mu_1+\mu_2)}{2}-a_n=k_1\\
-\mathrm{And,\:}\frac{n(\mu_1+\mu_2)}{2}+\frac{\mu_1-\mu_2}{2}-a_n=k_2\\
-\boxed{\implies a_n=\frac{n(\mu_1+\mu_2)}{2}+k_3\label{5}}
-\end{align}
+
 \begin{corollary}
 \begin{align}
 Var(S_n)=
@@ -258,11 +237,34 @@ Using lemma \eqref{3lemma}
     \end{cases}
 \end{align}
 \end{proof}
+
+Given,
+\begin{align}
+    \lim_{n \to\infty}E\brak{\frac{S_n-a_n}{b_n}}=0
+\end{align}
+For all options, $a_n$ and $b_n$ are fixed numbers dependent only on $n$ and not a random variable. So, $E(a_n)=a_n$ and $E(b_n)=b_n$.
+\begin{align}
+    \implies \lim_{n \to\infty}\frac{E(S_n)-a_n}{b_n}=0\\
+\end{align}
+For all given options, 
+\begin{align}
+\lim_{n \to\infty}b_n=\infty 
+\end{align}
+So,
+\begin{align}
+\lim_{n \to\infty}E(S_n)-a_n=k, k\in\mathbb{R}, \mathrm{free\:of\:}n
+\end{align}
+Using corollary \eqref{eq2.0.4}, 
+\begin{align}
+\implies \frac{n(\mu_1+\mu_2)}{2}-a_n=k_1\\
+\mathrm{And,\:}\frac{n(\mu_1+\mu_2)}{2}+\frac{\mu_1-\mu_2}{2}-a_n=k_2\\
+\boxed{\implies a_n=\frac{n(\mu_1+\mu_2)}{2}+k_3\label{5}}
+\end{align}
 Given,
 \begin{align}
     \lim_{n\to\infty}Var\brak{\frac{S_n-a_n}{b_n}}=1
 \end{align}
-From equation \eqref{2},
+Using lemma \eqref{3lemma},
 \begin{align}
     \implies \lim_{n\to\infty}\frac{Var(S_n)}{b_n^2}=1\\
     \implies \frac{n(\sigma_1^2+\sigma_2^2)}{2b_n^2}=1,n=\mathrm{even}\\
